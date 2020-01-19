@@ -3,13 +3,13 @@
 Today **Firewalls** are more important than years before. Hackers and Bots are trying to invade your server. So what to do against it?
 Set up a firewall! But which one? **IPTables** is the strongest firewall in **Linux** environments. So we wanted to make IPTables usable by everyone. We created a simple **Web Interface** for IPTables so everyone can install and use it on his / her server.
 
-![Travis (.org)](https://img.shields.io/travis/jpylypiw/easywall)
-![Codacy grade](https://img.shields.io/codacy/grade/4e00bc51bf1b418099414d857d25249b)
-![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/jpylypiw/easywall)
+[![Travis (.org)](https://img.shields.io/travis/jpylypiw/easywall)](https://travis-ci.org/jpylypiw/easywall)
+[![Codacy grade](https://img.shields.io/codacy/grade/4e00bc51bf1b418099414d857d25249b)](https://app.codacy.com/manual/jpylypiw/easywall/dashboard)
+[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/jpylypiw/easywall)](https://codeclimate.com/github/jpylypiw/easywall)
 [![GitHub license](https://img.shields.io/github/license/jpylypiw/easywall)](https://github.com/jpylypiw/easywall/blob/master/LICENSE)
 [![GitHub repo size](https://img.shields.io/github/repo-size/jpylypiw/easywall.svg)](https://github.com/jpylypiw/easywall)
 [![Project Version](https://img.shields.io/badge/release-alpha%20testing-red.svg)](https://github.com/jpylypiw/easywall)
-![Beerpay](https://img.shields.io/beerpay/jpylypiw/easywall)
+[![Beerpay](https://img.shields.io/beerpay/jpylypiw/easywall)](https://beerpay.io/jpylypiw/easywall)
 
 ## Demo
 
