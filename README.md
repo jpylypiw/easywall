@@ -1,19 +1,19 @@
 # easywall
 
-Today **Firewalls** are more important than years before. Hackers and Bots are trying to invade your server. So what to do against it?
-Set up a firewall! But which one? **IPTables** is the strongest firewall in **Linux** environments. So we wanted to make IPTables usable by everyone. We created a simple **Web Interface** for IPTables so everyone can install and use it on his / her server.
-
-[![Travis (.org)](https://img.shields.io/travis/jpylypiw/easywall)](https://travis-ci.org/jpylypiw/easywall)
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/jpylypiw/easywall)](https://codeclimate.com/github/jpylypiw/easywall)
-[![Code Climate coverage](https://img.shields.io/codeclimate/coverage/jpylypiw/easywall)](https://codeclimate.com/github/jpylypiw/easywall)
+[![GitHub Actions Build](https://img.shields.io/github/workflow/status/jpylypiw/easywall/python-testing)](https://github.com/jpylypiw/easywall/actions)
+[![CodeCov Coverage](https://img.shields.io/codecov/c/gh/jpylypiw/easywall)](https://codecov.io/gh/jpylypiw/easywall)
 [![GitHub license](https://img.shields.io/github/license/jpylypiw/easywall)](https://github.com/jpylypiw/easywall/blob/master/LICENSE)
 [![GitHub repo size](https://img.shields.io/github/repo-size/jpylypiw/easywall.svg)](https://github.com/jpylypiw/easywall)
 [![Project Version](https://img.shields.io/badge/release-alpha%20testing-red.svg)](https://github.com/jpylypiw/easywall)
+[![Discord Support](https://img.shields.io/discord/333980251921186818)](https://discord.gg/CUj2sFb)
 [![Beerpay](https://img.shields.io/beerpay/jpylypiw/easywall)](https://beerpay.io/jpylypiw/easywall)
+
+Today **Firewalls** are more important than years before. Hackers and Bots are trying to invade your server. So what to do against it?
+Set up a firewall! But which one? **IPTables** is the strongest firewall in **Linux** environments. So we wanted to make IPTables usable by everyone. We created a simple **Web Interface** for IPTables so everyone can install and use it on his / her server.
 
 ## Demo
 
-> We are currently setting up a self resetting demo server.*
+> We are currently setting up a self resetting demo server.\*
 
 ## Features
 
@@ -50,6 +50,6 @@ It re-distributes other open-source tools and libraries. Please check its [Licen
 
 To create a development environment you have to execute the following command after cloning the repository:
 
-``` bash
+```bash
 python3 setup.py develop
 ```
