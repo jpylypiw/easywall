@@ -7,7 +7,7 @@ from tests.web.utils import (prepare_client, prepare_configuration,
                              restore_configuration)
 
 
-class TestApply(unittest.TestCase):
+class TestError(unittest.TestCase):
     """
     TODO: Doku
     """
@@ -20,9 +20,17 @@ class TestApply(unittest.TestCase):
     def tearDown(self):
         restore_configuration()
 
-    def test_apply(self):
+    def test_non_existent_logged_out(self):
+        """
+        TODO: Doku
+        """
+        response = self.client.get('/nonexistent')
+        self.assertIn(b"Please sign in", response.data)
+
+    def test_non_existent_logged_in(self):
         """
         TODO: Doku
         """
         self.login.log_in(self.client)
-        self.client.get('/apply')
+        response = self.client.get('/nonexistent')
+        self.assertIn(b"404", response.data)
