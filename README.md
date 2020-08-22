@@ -1,6 +1,6 @@
 # easywall
 
-[![GitHub Actions Build](https://img.shields.io/github/workflow/status/jpylypiw/easywall/python-testing)](https://github.com/jpylypiw/easywall/actions)
+[![GitHub Actions Build](https://img.shields.io/github/workflow/status/jpylypiw/easywall/pytest)](https://github.com/jpylypiw/easywall/actions)
 [![Coveralls github](https://img.shields.io/coveralls/github/jpylypiw/easywall)](https://coveralls.io/github/jpylypiw/easywall)
 [![GitHub license](https://img.shields.io/github/license/jpylypiw/easywall)](https://github.com/jpylypiw/easywall/blob/master/LICENSE)
 [![GitHub repo size](https://img.shields.io/github/repo-size/jpylypiw/easywall.svg)](https://github.com/jpylypiw/easywall)
