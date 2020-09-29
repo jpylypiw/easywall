@@ -1,8 +1,5 @@
 #!/bin/bash
 
-GIT_URL="https://github.com/jpylypiw/easywall/archive/master.zip"
-GIT_FILE="master.zip"
-ZIP_FOLDER="easywall-master"
 CONFIGFOLDER="config"
 RULESFOLDER="rules"
 SSLFOLDER="ssl"
@@ -15,6 +12,11 @@ SCRIPTSPATH=$(dirname "$(readlink -f "$0")")
 OLDPATH="$(dirname "${SCRIPTSPATH}")"
 NEWPATH="$(dirname "${OLDPATH}")/$(basename "${OLDPATH}")-new"
 BACKUPPATH="${OLDPATH}-backup"
+
+GIT_VERSION=$(curl --silent "https://api.github.com/repos/jpylypiw/easywall/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([0-9\.]+)".*/\1/')
+GIT_URL="https://github.com/jpylypiw/easywall/archive/v${GIT_VERSION}.zip"
+GIT_FILE="easywall-${GIT_VERSION}.zip"
+ZIP_FOLDER="easywall-${GIT_VERSION}"
 
 STEPS=10
 STEP=1
