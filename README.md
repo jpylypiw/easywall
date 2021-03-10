@@ -5,7 +5,7 @@
 [![Repo Size](https://img.shields.io/github/repo-size/jpylypiw/easywall.svg)](https://github.com/jpylypiw/easywall)
 [![Release Status](https://img.shields.io/pypi/status/easywall)](https://github.com/jpylypiw/easywall)
 [![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fdev01vt.wdkro.de%3A12227)](https://github.com/jpylypiw/easywall)
-[![Discord Support](https://img.shields.io/discord/333980251921186818)](https://discord.gg/CUj2sFb)
+[![Discord Support](https://img.shields.io/discord/819293895045283930)](https://discord.gg/3zJMvChvUA)
 [![Beerpay](https://img.shields.io/beerpay/jpylypiw/easywall)](https://beerpay.io/jpylypiw/easywall)
 
 [![Pypi Download](https://img.shields.io/badge/download-pypi-yellowgreen)](https://pypi.org/project/easywall/)
