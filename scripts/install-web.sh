@@ -5,7 +5,6 @@ FONTAWESOME="4.7.0"
 JQUERY="3.3.1"
 POPPER="1.14.3"
 CONFIGFOLDER="config"
-RULESFOLDER="rules"
 SSLFOLDER="ssl"
 CONFIGFILE="web.ini"
 SAMPLEFILE="web.sample.ini"
@@ -100,10 +99,8 @@ echo "" && echo -e "\\e[33m($STEP/$STEPS)\\e[32m Set permissions on files and fo
 chown -Rv easywall:easywall "${HOMEPATH}"
 chown -Rv easywall:easywall "$WEBDIR"
 chown -Rv easywall:easywall "${HOMEPATH}/${CONFIGFOLDER}"
-chown -Rv easywall:easywall "${HOMEPATH}/${RULESFOLDER}"
 chmod -v 750 "${HOMEPATH}"
 chmod -v 750 "${HOMEPATH}/${CONFIGFOLDER}"
-chmod -Rv 750 "${HOMEPATH}/${RULESFOLDER}"
 
 # Step 7
 echo "" && echo -e "\\e[33m($STEP/$STEPS)\\e[32m Create the systemd service \\e[39m" && ((STEP++))
