@@ -87,6 +87,28 @@ class Config():
 
         return result
 
+    def remove_key(self, section: str, key: str) -> bool:
+        """
+        Delete a key/value pair into memory configuration and writes it to config file.
+
+        [Data Types] bool
+        """
+        result = True
+        try:
+            del self.configlib[section][key]
+        except KeyError as exc:
+            message = "Failed to write data to configuration: \n " + \
+                "section: '{}' \n key: '{}' \n " + \
+                "valid sections are: \n {} \n inner error: \n {}"
+            error(message.format(section, key, self.get_sections(), format_exception(exc)))
+            result = False
+
+        if result:
+            with open(self.config_file_path, 'w') as configfile:
+                self.configlib.write(configfile)
+
+        return result
+
     def get_sections(self) -> list:
         """
         Return a list of the configuration section names/keys.
