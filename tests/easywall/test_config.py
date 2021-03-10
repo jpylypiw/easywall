@@ -73,3 +73,11 @@ class TestConfig(unittest.TestCase):
     def test_set_value_fail_section(self) -> None:
         """TODO: Doku."""
         self.assertEqual(self.config.set_value("TEST2", "asd", "asd"), False)
+
+    def test_remove_key_success(self) -> None:
+        """TODO: Doku."""
+        self.assertEqual(self.config.remove_key("TEST", "teststring"), True)
+
+    def test_remove_key_fail(self) -> None:
+        """TODO: Doku."""
+        self.assertEqual(self.config.remove_key("TEST", "xxx"), False)
