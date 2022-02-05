@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  easywall:
+    container_name: easywall
+    image: easywall:latest
+    build:
+      context: .
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    volumes:
+      - /lib/modules:/lib/modules:ro
+    #environment: ini file parameter overload examples
+      # overload `web.ini > [WEB] > username` value to "admin"
+      #INI_WEB_WEB_USERNAME: admin
+      # overload `web.ini > [WEB] > password` value "admin"
+      #INI_WEB_WEB_PASSWORD: f56cc0b804c8381008c1944872b073199cdcf1bb080d34594968a876f6845dc4f6a5b9ebe32c1daa8f8311ed030db04075d314604f3c0a43f054794f127cde55
+    network_mode: host
