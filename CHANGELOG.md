@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Python 3.6 support discontinued as the version is no longer officially supported
+- Python 3.10 support prepared, since the version was released a few months ago
+
 ## [0.3.1] - 2021-02-17
 
 [Full Changelog](https://github.com/jpylypiw/easywall/compare/v0.3.0...v0.3.1)
