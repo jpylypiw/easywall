@@ -24,9 +24,11 @@ To prevent these attacks, you can use a firewall on your system. **IPTables** is
 
 ## Demo
 
+**The demo is currently not available because a new server has to be installed for this purpose.**
+
 You can view an online version of the program as a demo under the following link:
 
-<https://dev01vt.wdkro.de:12227/> (Certificate is provided by Let's Encrypt)
+<https://addurlhere> (Certificate is provided by Let's Encrypt)
 
 - **Username**: demo
 - **Password**: demo
