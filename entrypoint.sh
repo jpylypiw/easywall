@@ -33,10 +33,10 @@ update_config() {
         END {
             for(c = 1; c <= ln; c++) print lines[c] > ARGV[1]
         }
-    ' $file
+    ' "${file}"
 }
 
-: ${EASYWALL_SSL_ENABLED:="true"}
+: "${EASYWALL_SSL_ENABLED:="true"}"
 
 mkdir -p config
 for config in easywall log web; do
@@ -52,21 +52,27 @@ done
 
 if [ "$EASYWALL_SSL_ENABLED" == "true" ] && [ ! -f ssl/easywall.crt ]; then
     mkdir -p ssl
-    (export PASSPHRASE="$(head -c 500 /dev/urandom | tr -dc a-z0-9A-Z | head -c 128; echo)" \
-         && openssl genrsa -des3 -out ssl/easywall.key -passout env:PASSPHRASE 4096 \
-         && openssl req -new -batch -key ssl/easywall.key -out ssl/easywall.csr -passin env:PASSPHRASE -subj "$(
-            printf "/%s=%s" \
-                "C"                         "${EASYWALL_SSL_CRT_CONTRY:-"DE"}" \
-                "ST"                        "${EASYWALL_SSL_CRT_CITY:-"Berlin"}" \
-                "O"                         "${EASYWALL_SSL_CRT_ORG:-"easywall"}" \
-                "localityName"              "${EASYWALL_SSL_CRT_REGION:-"Berlin"}" \
-                "commonName"                "${EASYWALL_SSL_CRT_CN:-"$(hostname -f)"}" \
-                "organizationalUnitName"    "${EASYWALL_SSL_CRT_OU:-"IT"}" \
-                "emailAddress"              "${EASYWALL_SSL_CRT_EMAIL:-"admin@example.com"}" \
-            )" \
-         && openssl rsa -in ssl/easywall.key -out ssl/easywall.key -passin env:PASSPHRASE \
-         && openssl x509 -req -days 3650 -in ssl/easywall.csr -signkey ssl/easywall.key -out ssl/easywall.crt)
-    chmod  700 ssl
+    (
+        PASSPHRASE="$(
+            head -c 500 /dev/urandom | tr -dc a-z0-9A-Z | head -c 128
+            echo
+        )" &&
+            export PASSPHRASE &&
+            openssl genrsa -des3 -out ssl/easywall.key -passout env:PASSPHRASE 4096 &&
+            openssl req -new -batch -key ssl/easywall.key -out ssl/easywall.csr -passin env:PASSPHRASE -subj "$(
+                printf "/%s=%s" \
+                    "C" "${EASYWALL_SSL_CRT_CONTRY:-"DE"}" \
+                    "ST" "${EASYWALL_SSL_CRT_CITY:-"Berlin"}" \
+                    "O" "${EASYWALL_SSL_CRT_ORG:-"easywall"}" \
+                    "localityName" "${EASYWALL_SSL_CRT_REGION:-"Berlin"}" \
+                    "commonName" "${EASYWALL_SSL_CRT_CN:-"$(hostname -f)"}" \
+                    "organizationalUnitName" "${EASYWALL_SSL_CRT_OU:-"IT"}" \
+                    "emailAddress" "${EASYWALL_SSL_CRT_EMAIL:-"admin@example.com"}"
+            )" &&
+            openssl rsa -in ssl/easywall.key -out ssl/easywall.key -passin env:PASSPHRASE &&
+            openssl x509 -req -days 3650 -in ssl/easywall.csr -signkey ssl/easywall.key -out ssl/easywall.crt
+    )
+    chmod 700 ssl
     chmod -R 600 ssl/*
 fi
 chown easywall:easywall -R .
@@ -75,5 +81,5 @@ touch /var/log/easywall.log
 chown easywall:easywall /var/log/easywall.log
 
 export PYTHONPATH=/app
-uwsgi config/web.ini&
+uwsgi config/web.ini &
 /usr/bin/env python3 -m easywall
