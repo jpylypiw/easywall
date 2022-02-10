@@ -260,7 +260,10 @@ class Main(object):
         """TODO: Doku."""
         port = self.cfg.get_value("WEB", "bindport")
         host = self.cfg.get_value("WEB", "bindip")
-        APP.run(str(host), str(port))
+        APP.run(
+            host=str(host),
+            port=int(port)
+        )
 
 
 if __name__ == '__main__':
