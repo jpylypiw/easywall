@@ -60,7 +60,7 @@ After installation, the web interface can be accessed in the browser at <https:/
 - **IPv6** - is completely supported since it should be used on every system.
 - **Two step activation** - Changed rules are activated in two steps to check the connection.
 - **Blacklisting and Whitelisting** - of IP addresses and IPv6 addresses.
-- **Port Forewarding** - Forward Ports through the Firewall.
+- **Port Forwarding** - Forward Ports through the Firewall.
 - **TCP, UDP and Port Ranges** - Open them if you need them in the internet.
 - **Own IPTables rules** - Can be managed in the web interface.
 - **Install and Update** - The software can be installed and updated easily.
