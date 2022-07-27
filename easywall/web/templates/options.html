@@ -417,7 +417,7 @@
                                     <div class="col-sm-6 mb-5">
                                         <div class="card border-secondary">
                                             <div class="card-header">
-                                                Reject invalid packages
+                                                Reject invalid packets
                                             </div>
                                             <div class="card-body">
                                                 <div class="form-group">
@@ -429,7 +429,7 @@
                                                         checked {% endif %}
                                                         aria-describedby="drop_invalid_packets_help">
                                                     <label class="form-check-label" for="drop_invalid_packets">
-                                                        Reject invalid packages
+                                                        Reject invalid packets
                                                     </label>
                                                     <small id="drop_invalid_packets_help" class="form-text text-muted">
                                                         If you enable the setting, invalid packets are rejected
@@ -448,11 +448,11 @@
                                                         checked {% endif %}
                                                         aria-describedby="drop_invalid_packets_log_help">
                                                     <label class="form-check-label" for="drop_invalid_packets_log">
-                                                        Log all dropped invalid packages
+                                                        Log all dropped invalid packets
                                                     </label>
                                                     <small id="drop_invalid_packets_log_help"
                                                         class="form-text text-muted">
-                                                        If you check this box, dropped invalid packages will be recorded
+                                                        If you check this box, dropped invalid packets will be recorded
                                                         in syslog. Please make sure that the syslog is rotated regularly
                                                         to avoid large logfiles.
                                                     </small>
@@ -460,7 +460,7 @@
 
                                                 <div class="form-group">
                                                     <label for="drop_invalid_packets_log_limit">
-                                                        Limit of entries in the log to dropped packages per
+                                                        Limit of entries in the log to dropped packets per
                                                         minute
                                                     </label>
                                                     <input type="text" class="form-control"
@@ -474,7 +474,7 @@
                                                     <small id="drop_invalid_packets_log_limit_help"
                                                         class="form-text text-muted">
                                                         Please enter the number of entries created by the dropped
-                                                        packages to be stored per minute in the log file. The
+                                                        packets to be stored per minute in the log file. The
                                                         configuration is needed to avoid log file flooding.
                                                     </small>
                                                 </div>
