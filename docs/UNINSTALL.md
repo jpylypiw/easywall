@@ -18,7 +18,7 @@ cd /opt/easywall
 - Run our automatic uninstallation script and carefully check the output for errors.
 
 ```sh
-bash scripts/update.sh
+bash scripts/uninstall.sh
 ```
 
 - Delete the installation folder of easywall with the following command.
