@@ -37,7 +37,7 @@ echo "deb https://apt.wdkro.de/ stable main" > /etc/apt/sources.list.d/easywall.
 - Import the GPG Key used for signing the release
 
 ```sh
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D88D7689C1624EE3
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 67A12A6883B73731
 ```
 
 - Install the easywall package as other software package
